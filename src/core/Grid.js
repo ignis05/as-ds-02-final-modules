@@ -165,24 +165,24 @@ Grid.prototype.getNeighbors = function (node, diagonalMovement) {
         nodes = this.nodes;
 
     // ↑
-    if (this.isWalkableAt(x, y - 1) && Math.abs(nodes[y - 1][x].z - z) <= 5) {
+    if (this.isWalkableAt(x, y - 1) && Math.abs(nodes[y - 1][x].z - z) <= 16) {
         neighbors.push(nodes[y - 1][x]);
         s0 = true;
     }
     // →
-    if (this.isWalkableAt(x + 1, y) && Math.abs(nodes[y][x + 1].z - z) <= 5) {
+    if (this.isWalkableAt(x + 1, y) && Math.abs(nodes[y][x + 1].z - z) <= 16) {
         neighbors.push(nodes[y][x + 1]);
         s1 = true;
     }
     // ↓
-    if (this.isWalkableAt(x, y + 1) && Math.abs(nodes[y + 1][x].z - z) <= 5) {
+    if (this.isWalkableAt(x, y + 1) && Math.abs(nodes[y + 1][x].z - z) <= 16) {
         console.log(nodes[y + 1][x].z, z);
 
         neighbors.push(nodes[y + 1][x]);
         s2 = true;
     }
     // ←
-    if (this.isWalkableAt(x - 1, y) && Math.abs(nodes[y][x - 1].z - z) <= 5) {
+    if (this.isWalkableAt(x - 1, y) && Math.abs(nodes[y][x - 1].z - z) <= 16) {
         neighbors.push(nodes[y][x - 1]);
         s3 = true;
     }
