@@ -176,8 +176,6 @@ Grid.prototype.getNeighbors = function (node, diagonalMovement) {
     }
     // ↓
     if (this.isWalkableAt(x, y + 1) && Math.abs(nodes[y + 1][x].z - z) <= 16) {
-        console.log(nodes[y + 1][x].z, z);
-
         neighbors.push(nodes[y + 1][x]);
         s2 = true;
     }
